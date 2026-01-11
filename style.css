@@ -1,0 +1,31 @@
+.card {
+    margin: auto;
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f0f0f0;  
+    transition: transform .3s; 
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateX(-5px);
+    box-shadow: rgba(0, 0, 0, 0.2); 
+}
+
+.card__title {
+    color: #333333;
+}
+
+.card__text {
+    color: #555555;
+}
+
+.card__button {
+    background-color: #4CAF50;
+}
+
+.card__button:hover {
+    background-color: #45a049;
+}
