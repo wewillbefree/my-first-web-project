@@ -1,15 +1,33 @@
-const button = document.querySelector(".card__button");
+const buttonPlus = document.querySelector(".card__button_plus");
+const buttonMinus = document.querySelector(".card__button_minus");
 const cardText = document.querySelector(".card__text")
 
-let count = 0;
+const state = {
+    value: 0
 
-button.addEventListener('click', ()=> {
-    count++;
-    cardText.textContent = `Clicks: ${count}`;
-    
+}
+
+
+const updateUi = () => {
+   buttonMinus.classList.toggle('card__button_disabled', state.value === 0)
+   cardText.classList.toggle('card__text-red', state.value >= 10)
+}
+
+buttonPlus.addEventListener('click', () => {
+    state.value++;
+    cardText.textContent = `Value: ${state.value}`;
+    updateUi()
 })
 
+buttonMinus.addEventListener('click', () => {
+    if (state.value === 0) return
+    state.value--
+    cardText.textContent = `Value: ${state.value}`;
+    updateUi()
 
+})
+
+updateUi()
 
 
 
