@@ -20,7 +20,6 @@ const updateUi = () => {
 const setValue = (newValue) => {
     state.value = Math.max(state.min, Math.min(state.max, newValue))
     updateUi()
-
 }
 
 buttonPlus.addEventListener('click', () => {
@@ -32,14 +31,4 @@ buttonMinus.addEventListener('click', () => {
 })
 
 updateUi()
-
-
-
-// button.addEventListener('click', () => {
-// button.classList.add('card__button_active');
-//     if (button.classList.contains('card__button_active')) {
-//         button.textContent = 'Enabled';
-//     }
-// })
-
 
